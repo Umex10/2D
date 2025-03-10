@@ -10,6 +10,10 @@ public class Pt {
         this.y = y;
     }
 
+    public Pt() {
+        this(0,0);
+    }
+
     public double getX() {
         return this.x;
     }
@@ -20,10 +24,15 @@ public class Pt {
 
     public double distance(Pt pt) {
 
-        double result = Math.sqrt(Math.pow((pt.x - this.x), 2) + Math.pow((pt.y - this.y), 2));
+        double result = Math.sqrt(Math.pow(pt.getX() - this.getX(), 2) + Math.pow(pt.getY() - this.getY(), 2));
 
         return result;
-    
+
     }
-    
+
+    public double distanceFromZero() {
+
+        return this.distance(new Pt());
+    }
+
 }
