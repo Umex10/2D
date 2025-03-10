@@ -18,12 +18,11 @@ public class Pt {
         return this.y;
     }
 
-    public double distance(Pt Pt) {
+    public double distance(Pt pt) {
 
-        double distanceX = Pt.x - this.x;
-        double distanceY = Pt.y - this.y;
+        double result = Math.sqrt(Math.pow((pt.x - this.x), 2) + Math.pow((pt.y - this.y), 2));
 
-        return 0.0;
+        return result;
     
     }
     
